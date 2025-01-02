@@ -10,5 +10,8 @@ tw:
 run: build
 	./demo
 
+dev:
+	air
+
 serve:
 	npx serve dist
