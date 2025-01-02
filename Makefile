@@ -1,6 +1,8 @@
-build:
+wasm:
 	GOARCH=wasm GOOS=js go build -o dist/web/app.wasm
-	go build
+
+build: wasm
+	go build -o tmp/bin/demo
 
 tw:
 	npx tailwindcss -i input.css -o dist/output.css
