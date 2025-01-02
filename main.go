@@ -32,9 +32,12 @@ type home struct {
 
 func (h *home) Render() app.UI {
 	return app.Div().Body(
-		app.H1().Text("Home Page"),
+		app.H1().Class("text-2xl font-bold text-red-500").Text("Home Page"),
 		app.P().Class().Text("Quo usque tandem abutere, Catilina, patientia nostra!"),
+		app.P().Class("text-sm").Text("small mak mak"),
 		app.A().Href("/hello").Text("go to Hello"),
+
+		app.Link().Href("output.css").Rel("stylesheet"),
 	)
 }
 

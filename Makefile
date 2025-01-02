@@ -16,5 +16,8 @@ build-wsl:
 run-wsl: build-wsl
 	./demo
 
+tw:
+	npx tailwindcss -i input.css -o dist/output.css --watch
+
 serve:
 	npx serve dist
