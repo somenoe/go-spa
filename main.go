@@ -31,13 +31,17 @@ type home struct {
 }
 
 func (h *home) Render() app.UI {
-	return app.Div().Body(
+	return app.Div().Class("p-4").Body(
+
 		app.H1().Class("text-2xl font-bold text-red-500").Text("Home Page"),
 		app.P().Class().Text("Quo usque tandem abutere, Catilina, patientia nostra!"),
-		app.P().Class("text-sm").Text("small mak mak"),
+		app.P().Class("text-sm italic bg-gray-500 text-white p-1").Text("small mak mak"),
 		app.A().Class("underline").Href("/hello").Text("go to Hello"),
 
-		app.Link().Href("output.css").Rel("stylesheet"),
+		// * FOR DEV BUILD
+		app.Script().Src("https://cdn.tailwindcss.com"),
+		// * FOR RELEASE BUILD
+		// app.Link().Href("output.css").Rel("stylesheet"),
 	)
 }
 
