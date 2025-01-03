@@ -4,11 +4,11 @@ tmp_dir = "tmp"
 
 [build]
 args_bin = []
-bin = "./tmp/bin/demo"
-cmd = "make build"
+bin = "./tmp/bin/main.exe"
+cmd = "mage build"
 delay = 1000
 exclude_dir = ["assets", "tmp", "vendor", "testdata", "dist"]
-exclude_file = []
+exclude_file = ["mage_output_file.go"]
 exclude_regex = ["_test.go"]
 exclude_unchanged = false
 follow_symlink = false
