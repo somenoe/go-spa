@@ -4,8 +4,8 @@ tmp_dir = "tmp"
 
 [build]
 args_bin = []
-bin = "./tmp/main.exe"
-cmd = "mage build"
+bin = "./tmp/main"
+cmd = "(GOARCH=wasm GOOS=js go build -o dist/web/app.wasm) & (go build -o tmp/main)"
 delay = 1000
 exclude_dir = ["assets", "tmp", "vendor", "testdata", "dist"]
 exclude_file = ["mage_output_file.go"]
