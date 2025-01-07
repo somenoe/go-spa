@@ -1,3 +1,9 @@
 {
         "liveServer.settings.root": "/dist",
+        "tailwindCSS.experimental.classRegex": [
+                "Class\\(\"([^\"]*)\"\\)"
+        ],
+        "tailwindCSS.includeLanguages": {
+                "go": "html"
+        },
 }
